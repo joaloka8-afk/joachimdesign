@@ -244,7 +244,7 @@ const PortraitCard = () => (
           <line x1="95" y1="115" x2="105" y2="115" stroke="var(--ink)" strokeWidth="1.2" opacity="0.4" />
         </svg>
 
-        <div className="absolute -bottom-3 -right-3 size-20 animate-spin-slow">
+        <div className="absolute -bottom-2 -right-2 size-16 animate-spin-slow">
           <svg viewBox="0 0 100 100" className="w-full h-full">
             <defs>
               <path id="circle-path" d="M 50, 50 m -36, 0 a 36,36 0 1,1 72,0 a 36,36 0 1,1 -72,0" />
@@ -295,8 +295,8 @@ const Marquee = () => {
   ]
   const row = [...items, ...items]
   return (
-    <section className="border-y border-[var(--border)] py-5 overflow-hidden relative bg-[var(--paper-warm)]">
-      <div className="relative">
+    <section className="border-y border-[var(--border)] py-5 overflow-hidden relative bg-[var(--paper-warm)] w-full">
+      <div className="relative w-full">
         <div className="flex gap-8 animate-marquee whitespace-nowrap items-center">
           {row.map((c, i) => (
             <span key={i} className="inline-flex items-center gap-8">
@@ -787,7 +787,7 @@ const Contact = () => {
    FOOTER
    ============================================================ */
 const Footer = () => (
-  <footer className="px-6 lg:px-10 pt-16 pb-8 border-t border-[var(--border)] overflow-hidden">
+  <footer className="px-6 lg:px-10 pt-16 pb-8 border-t border-[var(--border)] overflow-hidden w-full">
     <div className="max-w-[1200px] mx-auto">
       <Reveal>
         <div className="font-display text-[clamp(72px,16vw,200px)] leading-[0.9] tracking-[-0.035em] mb-10 select-none flex items-baseline">
@@ -821,7 +821,7 @@ const Footer = () => (
    ============================================================ */
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[var(--paper)] text-[var(--ink)]">
+    <div className="min-h-screen bg-[var(--paper)] text-[var(--ink)] overflow-x-hidden">
       <ScrollProgress />
       <Header />
       <main>

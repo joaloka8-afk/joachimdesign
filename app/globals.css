@@ -17,8 +17,9 @@
   --rust: #C24A2A;
 }
 
-html, body, #root { background: var(--paper); color: var(--ink); }
-body { font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+html { background: var(--paper); color: var(--ink); overflow-x: hidden; }
+body { background: var(--paper); color: var(--ink); font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; max-width: 100vw; }
+#root { background: var(--paper); }
 
 .font-display { font-family: 'Instrument Serif', Georgia, serif; letter-spacing: -0.02em; font-weight: 400; }
 .font-sans    { font-family: 'Inter', system-ui, sans-serif; }
