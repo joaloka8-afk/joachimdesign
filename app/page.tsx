@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
-import { ArrowRight, ArrowUpRight, Copy, Check, Globe, Workflow, Server, Calendar, Clock, Github, Mail } from 'lucide-react'
+import { ArrowRight, ArrowUpRight, Copy, Check, Globe, Workflow, Server, Calendar, Clock, Github } from 'lucide-react'
 
 /* ============================================================
    HOOKS
@@ -498,8 +498,8 @@ const Work = () => {
    PROCESS
    ============================================================ */
 const steps = [
-  { n: '01', t: 'You send me a message',      d: 'Email, LinkedIn, whatever. Tell me the rough shape of the thing. No formal brief needed. I reply within 24 hours on weekdays.' },
-  { n: '02', t: 'We talk for 30 minutes',      d: "A call to figure out if I'm the right person. I'm often not — I'll tell you, and sometimes recommend someone better." },
+  { n: '01', t: 'You send me a message',      d: 'Email is best — hei@joachim.design. Tell me the rough shape of the thing. No formal brief needed. I reply within 24 hours on weekdays.' },
+  { n: '02', t: 'We have a quick exchange',    d: "A few emails to figure out if I'm the right person. I'm often not — I'll tell you, and sometimes recommend someone better." },
   { n: '03', t: 'I send you a written proposal', d: 'Scope, timeline, fixed price or T&M, payment schedule. Readable. No 30-page decks. Usually within a few days.' },
   { n: '04', t: 'We ship',                     d: 'Weekly demos, a shared Linear or GitHub project, and a standing Slack channel. You see progress every week, not at the end.' },
   { n: '05', t: 'Handover + optional retainer', d: "Runbooks, docs, a Loom walkthrough. If you want me to stay on to keep things alive — monthly retainer, cancel anytime." },
@@ -657,6 +657,8 @@ const faqs = [
     a: 'TypeScript, React / Next.js, Node, Python, Postgres. For agents: LangGraph, OpenAI/Anthropic SDKs, custom orchestrations. Hosting on Railway by default, AWS/Vercel/Cloudflare when it makes sense.' },
   { q: 'How do you price?',
     a: "Fixed price for well-scoped work. Time & materials for open-ended or retainer work (rate on request). I'll always give you a written quote before you commit to anything." },
+  { q: 'How do I get in touch?',
+    a: 'Email only — hei@joachim.design. A paragraph about the project, a rough timeline, and a budget range if you have one. That\'s enough to start.' },
   { q: 'Norwegian only, or international too?',
     a: 'Mostly EU clients, with a handful in the US. I invoice in NOK, EUR, or USD. Contracts in English.' },
 ]
@@ -751,9 +753,7 @@ const Contact = () => {
             <div className="font-mono text-[10px] uppercase tracking-[0.16em] text-[var(--ink-subtle)] mb-3">▸ Or find me at</div>
             <ul className="space-y-3">
               {[
-                { icon: Github,   label: 'github.com/joachim-design',      h: 'Code and side projects' },
-                { icon: Mail,     label: 'linkedin.com/in/joachim-design',  h: 'Boring professional stuff' },
-                { icon: Calendar, label: 'cal.com/joachim',                 h: '30-min intro call (free)' },
+                { icon: Github, label: 'github.com/joachim-design', h: 'Code and side projects' },
               ].map((l) => (
                 <li key={l.label}>
                   <a href="#" className="group/a flex items-center gap-3 text-[16px] text-[var(--ink)]/85 hover:text-[var(--pink)] transition-colors">
